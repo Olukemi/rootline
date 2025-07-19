@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Family Tree App</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/cytoscape@3.24.0/dist/cytoscape.min.js"></script>
+</head>
+<body>
+  <h1>Family Tree Builder</h1>
+
+  <form id="member-form">
+    <input type="text" id="name" placeholder="Name" required>
+    <input type="text" id="parent" placeholder="Parent (optional)">
+    <button type="submit">Branch</button>
+  </form>
+
+  <div id="cy" style="width: 100%; height: 500px; margin-top: 2rem;"></div>
+
+  <div id="tree-display"></div>
+
+  <button id="download-btn">Download CSV</button>
+  <input type="file" id="upload" accept=".csv">
+
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
